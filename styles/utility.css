@@ -1,0 +1,36 @@
+.container {
+    --max-width: 375px;
+    margin-inline: auto;
+    width: min(var(--max-width), 100% - var(--px) * 2);
+}
+
+.py-header {
+    margin-block: var(--py-header);
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.gap-\.5 {
+    gap: .5rem;
+}
+
+@media (width >= 80rem) {
+    .container{
+        --max-width: 80rem;
+    }
+
+.desktop-only {
+    display: inline-block;
+}
+
+}

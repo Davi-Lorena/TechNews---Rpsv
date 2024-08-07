@@ -1,0 +1,17 @@
+header {
+& .container {
+    font: var(--text-nav);
+justify-content: space-between;
+
+& img {
+    cursor: pointer;
+}
+
+& a:hover {
+    color: var(--brand-color-light);
+    text-decoration: underline;
+}
+
+
+}
+}
