@@ -12,8 +12,16 @@
     padding-block: .875rem;
 }
 
+.py-section {
+    margin-top: var(--py-section);
+}
+
 .flex {
     display: flex;
+}
+
+.grid {
+    display: grid;
 }
 
 .items-center {
@@ -26,6 +34,10 @@
 
 .gap-\.5 {
     gap: .5rem;
+}
+
+.gap-1 {
+    gap: 1rem;
 }
 
 

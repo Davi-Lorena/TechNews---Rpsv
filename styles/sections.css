@@ -1,0 +1,113 @@
+#initial .container {
+justify-content: center;
+    & figure {
+        position: relative;
+        overflow: hidden;
+border-radius: .25rem;
+        &::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(180deg, transparent 0%, #020617);
+        }
+
+    
+        & figcaption {
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+
+    & #one {
+        max-width: 20.5rem;
+
+        & img {
+            height: 26rem;
+            width: 20.5rem;
+        }
+
+        & span {
+            margin-left: 1rem;
+            
+        }
+
+        & h2 {
+            max-height: 6rem;
+            padding-inline: 1rem;
+            margin-bottom: 1rem;
+            font: var(--h1);
+        }
+    }
+
+    & > div {
+
+& figure {
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg, transparent 0%, #020617 100%
+        );
+    }
+}
+
+        & img {
+            width: 20.5rem;
+            height: 12.5rem;
+        }
+
+        & figure figcaption {
+            & span {
+                margin-left: .75rem;
+               }
+
+               & h2 {
+                font: var(--h3);
+                padding-inline: .75rem;
+                margin-bottom: .75rem;
+                max-height: 3.75rem;
+               }
+        }
+    }
+
+}
+
+@media (width >=80em) {
+    & figure {
+        & h2 + h2 {
+            display: none;
+        }
+    }
+
+    #initial .container {
+        grid-template-columns: 1fr 1fr;
+        justify-content: initial;
+        & #one {
+            max-width: 100%;
+    
+        & img {
+                height: 26rem;
+                width: 100%;
+            }
+    }
+
+    & > div {
+        grid-template-columns: 1fr 1fr;
+        & figure {
+            max-width: 100%;
+
+            & figcaption {
+                & img {
+                    width: 100%;
+                    height: 12.5rem;
+                }
+            }
+        }
+    }
+
+    }
+}
