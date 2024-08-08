@@ -5,7 +5,11 @@
 }
 
 .py-header {
-    margin-block: var(--py-header);
+    padding-block: var(--py-header);
+}
+
+.py-nav {
+    padding-block: .875rem;
 }
 
 .flex {
@@ -23,6 +27,7 @@
 .gap-\.5 {
     gap: .5rem;
 }
+
 
 @media (width >= 80rem) {
     .container{

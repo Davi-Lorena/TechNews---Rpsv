@@ -15,3 +15,38 @@ justify-content: space-between;
 
 }
 }
+
+nav {
+& .container {
+    border-block: 1px solid var(--stroke-color);
+    overflow-x: auto;
+gap: 2rem;
+
+&::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+& a {
+    text-wrap: nowrap;
+    font: var(--text-span);
+    color: var(--text-color-secondary);
+
+    &:hover {
+        color: var(--brand-color-light);
+        text-decoration: underline;
+    }
+
+}
+
+}
+
+}
+
+@media (width >= 80em) {
+    nav .container {
+        justify-content: space-between;
+    }
+}
+
+
