@@ -145,20 +145,48 @@ border-radius: .25rem;
 }
 }
 
+#ai .container {
+justify-content: center;
+    & div + div {
+        margin-top: 2rem;
+    }
+
+    & .news {
+        max-width: 20.5rem;
+    & img {
+        height: 5rem;
+        aspect-ratio: 1;
+    }
+
+    & h2 {
+        font: var(--h2);
+        margin-bottom: .25rem;
+    }
+
+    & p {
+        font: var(--text-sm);
+        color: var(--text-color-secondary);
+    }
+}
+}
+
 @media (width >=80em) {
 
 section header {
     max-width: 100%;
 }
 
-      h2 + h2 {
+section .container {
+    justify-content: initial;
+}
+
+      h2 + h2, p + p {
             display: none;
         }
     
 
     #initial .container {
         grid-template-columns: 1fr 1fr;
-        justify-content: initial;
         & #one {
             max-width: 100%;
     
@@ -185,9 +213,6 @@ section header {
     }
 
 #weekly .container{
-    justify-content: initial;
-
-    
   & .grid {
     display: flex;
     gap: 1rem;
@@ -206,6 +231,19 @@ section header {
 
 }
 
+#ai .container{
+   justify-content: start;
+& .news {
+    max-width: 43.5rem;
+    & img:not([class="desktop-only"]){
+        display: none;
+    }
+
+    & img {
+        height: 11rem;
+    }
 
 }
 
+}
+}
