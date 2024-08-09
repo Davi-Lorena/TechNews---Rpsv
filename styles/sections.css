@@ -1,7 +1,43 @@
+section + section {
+    margin-top: var(--gap-section);
+}
+
+& figure {
+    position: relative;
+
+    & figcaption {
+        position: absolute;
+    }
+}
+
+section header {
+    padding-block: .75rem 1.5rem;
+    border-top: 1px solid var(--stroke-color);
+justify-content: space-between;
+max-width: 20.5rem;
+
+& a, h3 {
+    font: var(--text-span);
+    color: var(--text-color-secondary);
+}
+
+  & a { 
+    gap: .25rem;
+    & span {
+        background: url(../assets/icons/ArrowRight.svg) no-repeat;
+    width: 1rem;
+    height: 1rem;
+}
+&:hover span {
+    background: url(../assets/icons/ArrowRight-hover.svg) no-repeat;
+}
+
+}
+}
+
 #initial .container {
 justify-content: center;
     & figure {
-        position: relative;
         overflow: hidden;
 border-radius: .25rem;
         &::before {
@@ -15,7 +51,6 @@ border-radius: .25rem;
 
     
         & figcaption {
-            position: absolute;
             bottom: 0;
         }
 
@@ -76,12 +111,50 @@ border-radius: .25rem;
 
 }
 
-@media (width >=80em) {
+#weekly .container {
+    justify-content: center;
+  
     & figure {
-        & h2 + h2 {
+        margin-bottom: .5rem;
+        & img {
+            width: 20.5rem;
+        }
+
+& figcaption {
+    top: 0;
+    margin: .5rem;
+}
+
+    }
+
+& figure + h2, h2 + h2 {
+    font: var(--h2);
+    max-width: 20.5rem;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--brand-color-light);
+        text-decoration: underline;
+    }
+}
+
+& .grid {
+& div + div {
+    margin-top: 2rem;
+}
+}
+}
+
+@media (width >=80em) {
+
+section header {
+    max-width: 100%;
+}
+
+      h2 + h2 {
             display: none;
         }
-    }
+    
 
     #initial .container {
         grid-template-columns: 1fr 1fr;
@@ -110,4 +183,29 @@ border-radius: .25rem;
     }
 
     }
+
+#weekly .container{
+    justify-content: initial;
+
+    
+  & .grid {
+    display: flex;
+    gap: 1rem;
+
+    & div + div {
+        margin-top: 0;
+    }
+
 }
+
+& figure {
+    & img {
+        width: 24.5rem;
+    }
+}
+
+}
+
+
+}
+
