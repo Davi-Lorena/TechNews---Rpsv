@@ -1,4 +1,4 @@
-section + section {
+section + section, section + div {
     margin-top: var(--gap-section);
 }
 
@@ -36,6 +36,7 @@ max-width: 20.5rem;
 }
 
 #initial .container {
+    
 justify-content: center;
     & figure {
         overflow: hidden;
@@ -112,6 +113,7 @@ border-radius: .25rem;
 }
 
 #weekly .container {
+    
     justify-content: center;
   
     & figure {
@@ -130,12 +132,6 @@ border-radius: .25rem;
 & figure + h2, h2 + h2 {
     font: var(--h2);
     max-width: 20.5rem;
-
-    &:hover {
-        cursor: pointer;
-        color: var(--brand-color-light);
-        text-decoration: underline;
-    }
 }
 
 & .grid {
@@ -143,6 +139,10 @@ border-radius: .25rem;
     margin-top: 2rem;
 }
 }
+}
+
+.inter {
+    margin-bottom: 3.5rem;
 }
 
 #ai .container {
@@ -167,7 +167,36 @@ justify-content: center;
         font: var(--text-sm);
         color: var(--text-color-secondary);
     }
+
+
+
 }
+}
+
+#see .container {
+    justify-content: center;
+    
+    & > img {
+        width: 20.5rem;
+        margin-bottom: 2rem;
+    }
+
+    & div + div {
+        margin-top: 2rem;
+    }
+
+    & .content {
+        max-width: 20.5rem;
+& img {
+    aspect-ratio: 1;
+    height: 4.5rem;
+}
+
+        & h2 {
+            font: var(--text-sm-2);
+}
+    }
+
 }
 
 @media (width >=80em) {
@@ -213,6 +242,7 @@ section .container {
     }
 
 #weekly .container{
+    grid-area: weekly;
   & .grid {
     display: flex;
     gap: 1rem;
@@ -227,6 +257,17 @@ section .container {
     & img {
         width: 24.5rem;
     }
+}
+
+}
+
+.inter {
+    margin-bottom: 6.25rem;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+
+& section + section {
+    margin-top: 0;
 }
 
 }
@@ -246,4 +287,17 @@ section .container {
 }
 
 }
+
+
+#see .container {
+    & > img {
+        width: 30.5rem;
+        height: 17.5rem;
+    }
+    
+    & .content {
+        max-width: 30.5rem;
+    }
+}
+
 }
